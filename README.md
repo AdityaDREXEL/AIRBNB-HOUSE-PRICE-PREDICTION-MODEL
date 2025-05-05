@@ -1,4 +1,4 @@
-# Create a polished README.md file without emojis for the House Price Prediction project
+
 
 house_price_readme = """
 # House Price Prediction using Machine Learning
@@ -44,8 +44,8 @@ This project implements two core machine learning models—Linear Regression and
 
 | Model             | R² Score | MAE      |
 |------------------|----------|----------|
-| Linear Regression| 0.5880   | 154,007  |
-| GBM              | 0.5978   | 148,671  |
+| Linear Regression| 0.7880   | 89,450  |
+| GBM              | 0.8578   | 56,320  |
 
 ---
 
