@@ -1,88 +1,65 @@
-🏡 House Price Prediction using Machine Learning
+# Create a polished README.md file without emojis for the House Price Prediction project
+
+house_price_readme = """
+# House Price Prediction using Machine Learning
+
 This project implements two core machine learning models—Linear Regression and Gradient Boosting Machines (GBM)—to predict house sale prices using structured real estate data. It aims to provide accurate property valuations, enabling smarter decision-making for buyers, sellers, and agents.
 
-📁 Project Structure
-Report.pdf: Project documentation outlining objectives, methodology, and results.
+---
 
-GBM.py: Implementation of a custom Gradient Boosting Regressor built from scratch using decision trees.
+## Project Structure
 
-LR.py: Implementation of simple and polynomial Linear Regression with optional regularization.
+- `Report.pdf`: Project documentation outlining objectives, methodology, and results.
+- `GBM.py`: Implementation of a custom Gradient Boosting Regressor built from scratch using decision trees.
+- `LR.py`: Implementation of simple and polynomial Linear Regression with optional regularization.
+- `GradientBoostingMachineREADME.txt` & `LinearRegressionREADME.txt`: Component-specific documentation.
 
-GradientBoostingMachineREADME.txt & LinearRegressionREADME.txt: Component-specific documentation.
+---
 
-⚙️ Features
-🔹 Linear Regression
-Implements both simple and polynomial regression.
+## Features
 
-Includes regularization to avoid overfitting.
+### Linear Regression
 
-Uses R² and MAE for evaluation.
+- Supports both simple and polynomial regression.
+- Includes regularization to reduce overfitting.
+- Evaluated using R² and MAE metrics.
 
-🔹 Gradient Boosting Machine
-Custom Decision Tree Regressor as the weak learner.
+### Gradient Boosting Machine
 
-Configurable GBM with support for:
+- Uses a custom Decision Tree Regressor as the weak learner.
+- Configurable GBM with support for:
+  - Variable learning rates
+  - Adjustable tree depth and sample splitting
+- Ensemble of decision trees trained via residual fitting (boosting).
+- Evaluation via R² and MAE.
 
-Variable learning rates
+---
 
-Adjustable depth and sample splitting
+## Model Evaluation Metrics
 
-Ensemble model of decision trees
+- **R² Score**: Indicates how well predictions approximate actual values.
+- **Mean Absolute Error (MAE)**: Measures average absolute prediction error.
 
-Model training using residual fitting (boosting).
+### Final Results
 
-Evaluation via R² and MAE.
+| Model             | R² Score | MAE      |
+|------------------|----------|----------|
+| Linear Regression| 0.5880   | 154,007  |
+| GBM              | 0.5978   | 148,671  |
 
-🧪 Model Evaluation Metrics
-R² Score: Indicates how well predictions approximate actual values.
+---
 
-Mean Absolute Error (MAE): Measures average absolute prediction error.
+## Requirements
 
-📊 Final Results:
+- Python 3.x
+- Pandas
+- NumPy
 
-Model	R² Score	MAE
-Linear Regression	0.5880	154,007
-GBM	0.5978	148,671
-🧰 Requirements
-Python 3.x
+---
 
-Pandas
+## How to Use
 
-NumPy
+### 1. Install Dependencies
 
-🚀 How to Use
-Install Dependencies
-Install necessary packages (if not already installed):
-
-bash
-Copy
-Edit
+```bash
 pip install numpy pandas
-Prepare Data
-Place your dataset in the same directory and name it data.csv. Make sure it includes the following columns:
-
-bash
-Copy
-Edit
-['bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 
-'waterfront', 'view', 'condition', 'sqft_above', 'sqft_basement', 
-'yr_built', 'yr_renovated', 'price']
-Run Models
-
-For GBM:
-
-bash
-Copy
-Edit
-python GBM.py
-For Linear Regression:
-
-bash
-Copy
-Edit
-python LR.py
-📌 Notes
-Models use randomized train-test splits. Adjust seed value or split size in the scripts for experimentation.
-
-Polynomial regression in LR.py can be tuned using degree and regularization_lambda.
-
